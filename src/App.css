@@ -1,0 +1,23 @@
+/* https://coolors.co/ed1c23-dddddd-f5d09e-000000-b2ab9d */
+
+@import "tailwindcss";
+
+@theme {
+  --color-redcmyk: #ed1c23ff;
+  --color-platinum: #ddddddff;
+  --color-sunset: #f5d09eff;
+  --color-black: #000000ff;
+  --color-khaki: #b2ab9dff;
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(222, 222, 222, 0.31);
+}
