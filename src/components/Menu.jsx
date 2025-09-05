@@ -82,7 +82,7 @@ function Menu() {
           <div>
             <select
               id="language"
-              className="bg-[#1b464a] text-white rounded-2xl p-1"
+              className="bg-[#1b464a] text-white rounded-2xl p-1 cursor-pointer"
               value={language}
               onChange={handleChange}
             >

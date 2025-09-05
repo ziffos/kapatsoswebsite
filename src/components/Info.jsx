@@ -25,12 +25,18 @@ const foodItems = [
   { id: "Pork chop", url: "Pork_chop.jpg" },
 ];
 
-function Info() {
+export default function Info() {
   const scrollContainerRef = useRef(null);
-  const pauseRef = useRef(false); // pause when dragging/hovering
-  const rafRef = useRef(null); // store the RAF id
+  const pauseRef = useRef(false); // paused during hover/drag
+  const rafRef = useRef(null); // requestAnimationFrame id
+  const stateRef = useRef({
+    isDragging: false,
+    startX: 0,
+    scrollLeftStart: 0,
+    pointerId: null,
+  });
 
-  // ==== auto-scroll ====
+  // ==== auto-scroll loop ====
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -43,45 +49,82 @@ function Info() {
       const dt = ts - lastTs;
       lastTs = ts;
 
-      if (!pauseRef.current && !container.isDragging) {
+      const { isDragging } = stateRef.current;
+      if (!pauseRef.current && !isDragging) {
         container.scrollLeft += (pxPerSecond * dt) / 1000;
-
-        // loop back to start when we reach the end
         const maxScroll = container.scrollWidth - container.clientWidth;
         if (container.scrollLeft >= maxScroll - 1) {
-          container.scrollLeft = 0;
+          container.scrollLeft = 0; // loop back to start
         }
       }
       rafRef.current = requestAnimationFrame(loop);
     };
 
     rafRef.current = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(rafRef.current);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
-  // ==== drag-to-scroll (your code, plus pause/resume) ====
-  const handleMouseDown = (e) => {
-    const container = scrollContainerRef.current;
-    pauseRef.current = true;
-    container.isDragging = true;
-    container.startX = e.pageX - container.offsetLeft;
-    container.scrollLeftStart = container.scrollLeft;
+  // ==== pointer/hover handlers (works for mouse + touch + pen) ====
+  const handlePointerEnter = () => {
+    pauseRef.current = true; // pause auto-scroll on hover
   };
 
-  const handleMouseMove = (e) => {
+  const handlePointerLeave = () => {
+    // if drag leaves the container, end it and resume scrolling
     const container = scrollContainerRef.current;
-    if (!container.isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - container.startX) * 1;
-    container.scrollLeft = container.scrollLeftStart - walk;
-  };
-
-  const handleMouseUp = () => {
-    const container = scrollContainerRef.current;
-    container.isDragging = false;
+    const st = stateRef.current;
+    if (st.isDragging && st.pointerId !== null && container) {
+      try {
+        container.releasePointerCapture(st.pointerId);
+      } catch {}
+    }
+    stateRef.current.isDragging = false;
+    stateRef.current.pointerId = null;
     pauseRef.current = false;
   };
+
+  const handlePointerDown = (e) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    // allow dragging without browser scroll interfering
+    container.setPointerCapture?.(e.pointerId);
+
+    pauseRef.current = true;
+    stateRef.current.isDragging = true;
+    stateRef.current.pointerId = e.pointerId;
+    stateRef.current.startX = e.pageX - container.offsetLeft;
+    stateRef.current.scrollLeftStart = container.scrollLeft;
+  };
+
+  const handlePointerMove = (e) => {
+    const container = scrollContainerRef.current;
+    const st = stateRef.current;
+    if (!container || !st.isDragging) return;
+
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - st.startX) * 1; // multiplier = scroll sensitivity
+    container.scrollLeft = st.scrollLeftStart - walk;
+  };
+
+  const endDrag = () => {
+    const container = scrollContainerRef.current;
+    const st = stateRef.current;
+    if (container && st.pointerId !== null) {
+      try {
+        container.releasePointerCapture(st.pointerId);
+      } catch {}
+    }
+    stateRef.current.isDragging = false;
+    stateRef.current.pointerId = null;
+    pauseRef.current = false; // resume auto-scroll after interaction
+  };
+
+  const handlePointerUp = () => endDrag();
+  const handlePointerCancel = () => endDrag();
 
   return (
     <>
@@ -146,9 +189,13 @@ function Info() {
       <div
         ref={scrollContainerRef}
         className="no-scrollbar flex flex-nowrap gap-6 overflow-x-auto cursor-grab select-none items-center"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
+        style={{ touchAction: "none" }}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave} // optional polish: ensures drag doesn't get stuck
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
       >
         {foodItems.map((item, i) => (
           <div
@@ -167,5 +214,3 @@ function Info() {
     </>
   );
 }
-
-export default Info;
