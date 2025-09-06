@@ -2,27 +2,27 @@ import { useRef, useEffect } from "react";
 import arrow from "../assets/icons8-arrow-30.png";
 
 const foodItems = [
-  { id: "BBQ pork souvla", url: "BBQ_pork_souvla.jpg" },
-  { id: "Moussaka", url: "Moussaka.jpg" },
-  { id: "Pork streaky bacon", url: "Pork_streaky_bacon.jpg" },
-  { id: "Bulgur wheat", url: "Bulgur_wheat.jpg" },
-  { id: "Chicken Korma", url: "Chicken_Korma.jpg" },
-  { id: "Tahini", url: "Tahini.jpg" },
-  { id: "Whole barbeque chicken", url: "Whole_barbeque_chicken.jpg" },
+  { id: "BBQ pork souvla", url: "BBQ_pork_souvla.webp" },
+  { id: "Moussaka", url: "Moussaka.webp" },
+  { id: "Pork streaky bacon", url: "Pork_streaky_bacon.webp" },
+  { id: "Bulgur wheat", url: "Bulgur_wheat.webp" },
+  { id: "Chicken Korma", url: "Chicken_Korma.webp" },
+  { id: "Tahini", url: "Tahini.webp" },
+  { id: "Whole barbeque chicken", url: "Whole_barbeque_chicken.webp" },
   {
     id: "Potatoes with wine & coriander",
-    url: "Potatoes_with_wine_&_coriander.jpg",
+    url: "Potatoes_with_wine_&_coriander.webp",
   },
-  { id: "Pork diane", url: "Pork_diane.jpg" },
-  { id: "Peas", url: "Peas.jpg" },
-  { id: "Beans in tomato sauce", url: "Beans_in_tomato_sauce.jpg" },
-  { id: "Fried mushrooms", url: "Fried_mushrooms.jpg" },
-  { id: "Village salad", url: "Village_salad.jpg" },
-  { id: "Sea bream", url: "Sea_bream.jpg" },
-  { id: "Pork souvlaki", url: "Pork_souvlaki.jpg" },
-  { id: "Koupepia", url: "Koupepia.jpg" },
-  { id: "Dry black eyed beans", url: "Dry_black_eyed_beans.jpg" },
-  { id: "Pork chop", url: "Pork_chop.jpg" },
+  { id: "Pork diane", url: "Pork_diane.webp" },
+  { id: "Peas", url: "Peas.webp" },
+  { id: "Beans in tomato sauce", url: "Beans_in_tomato_sauce.webp" },
+  { id: "Fried mushrooms", url: "Fried_mushrooms.webp" },
+  { id: "Village salad", url: "Village_salad.webp" },
+  { id: "Sea bream", url: "Sea_bream.webp" },
+  { id: "Pork souvlaki", url: "Pork_souvlaki.webp" },
+  { id: "Koupepia", url: "Koupepia.webp" },
+  { id: "Dry black eyed beans", url: "Dry_black_eyed_beans.webp" },
+  { id: "Pork chop", url: "Pork_chop.webp" },
 ];
 
 export default function Info() {
@@ -132,7 +132,7 @@ export default function Info() {
         <div className="mx-auto w-full max-w-[1200px] overflow-hidden rounded-2xl shadow md:h-[400px] flex flex-col md:flex-row">
           <div
             className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: "url('/foodimages/Pastitsio.jpg')" }}
+            style={{ backgroundImage: "url('/foodimages/Pastitsio.webp')" }}
             role="img"
             aria-label="Pastitsio"
           ></div>
@@ -170,7 +170,7 @@ export default function Info() {
           </div>
           <div
             className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: "url('/foodimages/Keftedes.jpg')" }}
+            style={{ backgroundImage: "url('/foodimages/Keftedes.webp')" }}
             role="img"
             aria-label="Keftedes"
           ></div>

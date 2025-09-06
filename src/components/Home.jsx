@@ -1,9 +1,7 @@
 import { motion, MotionConfig } from "framer-motion";
-import gemista from "../assets/Stuffed vegetables gray.jpg";
 import kapatsoslogo from "../assets/kapatsoslogo.png";
 import facebook from "../assets/icons8-facebook-96.png";
 import instagram from "../assets/icons8-instagram-96.png";
-import tiktok from "../assets/icons8-tiktok-96.png";
 import foody from "../assets/foody.png";
 import wolt from "../assets/wolt.png";
 import Navbar from "./Navbar";
@@ -38,7 +36,7 @@ const Home = () => {
   return (
     <MotionConfig reducedMotion="user">
       <div
-        style={{ backgroundImage: `url(${gemista})` }}
+        style={{ backgroundImage: `url(/foodimages/Stuffed_vegetables.webp)` }}
         className="h-screen w-full bg-cover bg-center flex flex-col items-center text-white"
       >
         <div className="flex justify-start">
@@ -54,59 +52,53 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl font-bold drop-shadow-black drop-shadow-lg mb-1 text-center">
             WELCOME TO KAPATSOS
           </h1>
-          <h2 className="text-lg md:text-3xl drop-shadow-black drop-shadow font-light">
+          <h2 className="text-lg md:text-3xl drop-shadow-black drop-shadow font-light mb-6">
             The largest rotisserie buffet in Cyprus
           </h2>
 
-          <div className="bg-white h-[1px] w-[60px] m-3" />
-
           {/* Social + Delivery icons with motion */}
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
             {/* Social */}
-            <IconLink
-              href="#"
-              label="Facebook"
-              src={facebook}
-              className="h-[26px] md:h-[40px]"
-              whileHover={iconHover}
-              whileTap={iconTap}
-            />
-            <IconLink
-              href="#"
-              label="Instagram"
-              src={instagram}
-              className="h-[26px] md:h-[40px]"
-              whileHover={iconHover}
-              whileTap={iconTap}
-            />
-            <IconLink
-              href="#"
-              label="TikTok"
-              src={tiktok}
-              className="h-[26px] md:h-[40px]"
-              whileHover={iconHover}
-              whileTap={iconTap}
-            />
+            <div className="flex gap-1">
+              <IconLink
+                href="https://www.facebook.com/betty.crispy.chicken"
+                label="Facebook"
+                src={facebook}
+                className="h-[40px]"
+                whileHover={iconHover}
+                whileTap={iconTap}
+              />
+              <IconLink
+                href="https://www.instagram.com/betty.crispy.chicken"
+                label="Instagram"
+                src={instagram}
+                className="h-[40px]"
+                whileHover={iconHover}
+                whileTap={iconTap}
+              />
+            </div>
 
-            <div className="bg-white h-[29px] w-[1px] mx-2" />
+            <div className=" bg-white w-[29px] h-[1px] md:h-[29px] md:w-[1px] mx-2" />
 
             {/* Delivery */}
-            <IconLink
-              href="#"
-              label="Order on Wolt"
-              src={wolt}
-              className="h-[20px] md:h-[27px] ml-1 md:ml-2 mr-1 md:mr-2"
-              whileHover={deliveryHover}
-              whileTap={deliveryTap}
-            />
-            <IconLink
-              href="#"
-              label="Order on Foody"
-              src={foody}
-              className="h-[20px] md:h-[27px]"
-              whileHover={deliveryHover}
-              whileTap={deliveryTap}
-            />
+            <div className="flex gap-2 mt-2 md:mt-0">
+              <IconLink
+                href="https://bit.ly/3VH7xXf"
+                label="Order on Wolt"
+                src={wolt}
+                className="h-[27px] ml-1 md:ml-2 mr-1 md:mr-2"
+                whileHover={deliveryHover}
+                whileTap={deliveryTap}
+              />
+              <IconLink
+                href="https://bit.ly/3ZW5roJ"
+                label="Order on Foody"
+                src={foody}
+                className="h-[27px]"
+                whileHover={deliveryHover}
+                whileTap={deliveryTap}
+              />
+            </div>
           </div>
         </div>
       </div>

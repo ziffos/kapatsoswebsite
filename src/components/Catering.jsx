@@ -5,7 +5,7 @@ function Catering() {
         <div
           className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
           style={{
-            backgroundImage: "url('/foodimages/Tortillas_with_chicken.jpg')",
+            backgroundImage: "url('/foodimages/Tortillas_with_chicken.webp')",
           }}
           role="img"
           aria-label="Tortillas_with_chicken"
