@@ -7,7 +7,7 @@ function Footer() {
       <img src={kapatsoslogo} alt="" className="h-30" />
       <div>
         PSISTARIES KAPATSOS | Georgiou Griva Digeni 46, Limassol 3101, Cyprus |
-        +357 25 585897
+        <span>+357 25 585897</span>
       </div>
     </div>
   );

@@ -9,7 +9,13 @@ function InfoTwo() {
             <div className="text-center m-1">
               <h1 className="md:text-xl font-bold mb-2">CONTACT</h1>
               <p className="text-sm md:text-base font-light">
-                +357 25 585897 <br /> info@kapatsos.com
+                <span>
+                  <a href="tel:+35725585897">+357 25 585897</a>
+                </span>{" "}
+                <br />{" "}
+                <span>
+                  <a href="mailto:info@kapatsos.com">info@kapatsos.com</a>
+                </span>
               </p>
             </div>
             <div className="text-center m-1">

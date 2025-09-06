@@ -14,13 +14,22 @@ function Catering() {
         <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
           <h1 className="text-2xl md:text-3xl font-extrabold">CATERING</h1>
           <p className="mt-4 text-sm md:text-base leading-relaxed ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a
-            eius maxime amet asperiores, dolorum delectus aliquam in molestiae
-            temporibus, nemo alias ducimus? Nostrum adipisci beatae voluptatibus
-            libero molestiae maxime!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dolore a eius maxime amet asperiores, dolorum
-            delectus aliquam in molestiae temporibus, nemo alias ducimus?
-            Nostrum adipisci beatae voluptatibus libero molestiae maxime!
+            Bring the taste of Kapatsos to your next event. We offer all of our
+            dishes for larger orders, making it easy to enjoy our food outside
+            the restaurant. Whether it’s company meals, school lunches, family
+            gatherings, or big celebrations, we are here to make it special.
+            <br /> Our team is happy to help you plan and choose the dishes that
+            best fit your occasion, so you and your guests can enjoy a delicious
+            and stress-free experience.
+            <br />
+            For orders send us an email to{" "}
+            <span>
+              <a href="mailto:info@kapatsos.com">info@kapatsos.com</a>
+            </span>{" "}
+            or call us on{" "}
+            <span>
+              <a href="tel:+35725585897">+357 25 585897</a>
+            </span>
           </p>
         </div>
       </div>

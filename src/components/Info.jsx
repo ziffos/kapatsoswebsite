@@ -140,32 +140,32 @@ export default function Info() {
           <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
             <h1 className="text-2xl md:text-3xl font-extrabold">ABOUT US</h1>
             <p className="mt-4 text-sm md:text-base leading-relaxed ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a
-              eius maxime amet asperiores, dolorum delectus aliquam in molestiae
-              temporibus, nemo alias ducimus? Nostrum adipisci beatae
-              voluptatibus libero molestiae maxime!Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Dolore a eius maxime amet
-              asperiores, dolorum delectus aliquam in molestiae temporibus, nemo
-              alias ducimus? Nostrum adipisci beatae voluptatibus libero
-              molestiae maxime!
+              Founded in 2000, Kapatsos has become a favorite destination for
+              food lovers in Limassol. For over two decades, we have proudly
+              served our guests a wide variety of dishes through our generous
+              buffet, offering something for every taste and occasion. <br />{" "}
+              Our passion and experience lie in Cypriot cuisine, and we are
+              dedicated to sharing the authentic flavors and traditions of our
+              island with every visitor. Whether you are a local or a traveler
+              discovering Cyprus, our goal is to make you feel at home and give
+              you a memorable experience.
             </p>
           </div>
         </div>
 
         <div className="mx-auto w-full max-w-[1200px] overflow-hidden rounded-2xl shadow md:h-[400px] flex flex-col-reverse md:flex-row">
           <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
-            <h1 className="text-2xl md:text-3xl font-extrabold">
-              CYPRIOT KITCHEN
-            </h1>
+            <h1 className="text-2xl md:text-3xl font-extrabold">OUR FOOD</h1>
             <p className="mt-4 text-sm md:text-base leading-relaxed ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a
-              eius maxime amet asperiores, dolorum delectus aliquam in molestiae
-              temporibus, nemo alias ducimus? Nostrum adipisci beatae
-              voluptatibus libero molestiae maxime!Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Dolore a eius maxime amet
-              asperiores, dolorum delectus aliquam in molestiae temporibus, nemo
-              alias ducimus? Nostrum adipisci beatae voluptatibus libero
-              molestiae maxime!
+              At Kapatsos, food is more than just a meal — it is a celebration
+              of Cypriot culture. Our buffet highlights the very best of the
+              Cypriot kitchen, from timeless recipes passed down through
+              generations to dishes prepared with a modern touch.
+              <br />
+              While our heart belongs to Cyprus, our buffet also offers a
+              variety of Mediterranean and international flavors. This way,
+              every guest can discover something they love — whether it’s a
+              traditional Cypriot specialty or a new taste from abroad.
             </p>
           </div>
           <div
