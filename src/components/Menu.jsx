@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import englishMenu from "../data/englishmenu.json";
 import greekmenu from "../data/greekmenu.json";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 function Menu() {
@@ -76,9 +77,9 @@ function Menu() {
     <>
       <div className="flex flex-col items-center py-16">
         <div className="w-full md:w-[1200px] p-4 flex justify-end items-center mb-8">
-          <div className="mx-auto text-4xl font-bold text-center  relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-teal-600 after:mx-auto after:mt-2">
+          <h1 className="mx-auto text-4xl font-bold text-center  relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-teal-600 after:mx-auto after:mt-2">
             {t[language].title}
-          </div>
+          </h1>
           <div>
             <select
               id="language"
@@ -135,7 +136,7 @@ function Menu() {
 
           {/* RIGHT: CATEGORY CONTENT */}
           <div className="flex flex-col p-4">
-            <motion.div
+            <motion.h2
               key={`title-${activeCategory}`}
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 0.7, y: 0 }}
@@ -144,7 +145,7 @@ function Menu() {
               className="text-2xl font-bold"
             >
               {visibleItems[0]?.category}
-            </motion.div>
+            </motion.h2>
 
             <motion.div
               layout

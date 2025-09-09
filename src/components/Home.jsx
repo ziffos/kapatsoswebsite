@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import { motion, MotionConfig } from "framer-motion";
 import kapatsoslogo from "../assets/kapatsoslogo.png";
 import facebook from "../assets/icons8-facebook-96.png";
 import instagram from "../assets/icons8-instagram-96.png";
 import foody from "../assets/foody.png";
 import wolt from "../assets/wolt.png";
+
 import Navbar from "./Navbar";
 
 const iconHover = { y: -2, scale: 1.12 };
@@ -35,15 +37,19 @@ function IconLink({ href, label, src, className, whileHover, whileTap }) {
 const Home = () => {
   return (
     <MotionConfig reducedMotion="user">
-      <div
-        style={{ backgroundImage: `url(/foodimages/Stuffed_vegetables.webp)` }}
-        className="h-screen w-full bg-cover bg-center flex flex-col items-center text-white"
-      >
-        <div className="flex justify-start">
+      <div className="relative h-screen w-full flex flex-col items-center text-white overflow-hidden">
+        {/* Background image as <img> */}
+        <img
+          src="/foodimages/Stuffed_vegetables.webp"
+          alt="Stuffed vegetables"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+
+        <div className="flex justify-start w-full">
           <Navbar />
         </div>
 
-        <div className="flex flex-col flex-grow items-center justify-center mb-22">
+        <div className="flex flex-col flex-grow items-center justify-center mb-22 z-10">
           <img
             src={kapatsoslogo}
             alt="Kapatsos logo"

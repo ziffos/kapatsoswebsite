@@ -78,7 +78,9 @@ export default function Info() {
     if (st.isDragging && st.pointerId !== null && container) {
       try {
         container.releasePointerCapture(st.pointerId);
-      } catch {}
+      } catch {
+        /* empty */
+      }
     }
     stateRef.current.isDragging = false;
     stateRef.current.pointerId = null;
@@ -116,7 +118,9 @@ export default function Info() {
     if (container && st.pointerId !== null) {
       try {
         container.releasePointerCapture(st.pointerId);
-      } catch {}
+      } catch {
+        /* empty */
+      }
     }
     stateRef.current.isDragging = false;
     stateRef.current.pointerId = null;
@@ -130,12 +134,12 @@ export default function Info() {
     <>
       <div className=" flex flex-col gap-4 md:gap-12 py-16 px-2 items-center">
         <div className="mx-auto w-full max-w-[1200px] overflow-hidden rounded-2xl shadow md:h-[400px] flex flex-col md:flex-row">
-          <div
-            className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: "url('/foodimages/Pastitsio.webp')" }}
-            role="img"
-            aria-label="Pastitsio"
-          ></div>
+          <img
+            src="/foodimages/Pastitsio.webp"
+            alt="Pastitsio"
+            className="w-full md:w-1/2 h-56 md:h-auto object-cover object-center"
+            loading="lazy"
+          />
 
           <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
             <h1 className="text-2xl md:text-3xl font-extrabold">ABOUT US</h1>
@@ -155,7 +159,7 @@ export default function Info() {
 
         <div className="mx-auto w-full max-w-[1200px] overflow-hidden rounded-2xl shadow md:h-[400px] flex flex-col-reverse md:flex-row">
           <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
-            <h1 className="text-2xl md:text-3xl font-extrabold">OUR FOOD</h1>
+            <h2 className="text-2xl md:text-3xl font-extrabold">OUR FOOD</h2>
             <p className="mt-4 text-sm md:text-base leading-relaxed ">
               At Kapatsos, food is more than just a meal — it is a celebration
               of Cypriot culture. Our buffet highlights the very best of the
@@ -168,12 +172,12 @@ export default function Info() {
               traditional Cypriot specialty or a new taste from abroad.
             </p>
           </div>
-          <div
-            className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: "url('/foodimages/Keftedes.webp')" }}
-            role="img"
-            aria-label="Keftedes"
-          ></div>
+          <img
+            src="/foodimages/Keftedes.webp"
+            alt="Keftedes"
+            className="w-full md:w-1/2 h-56 md:h-auto object-cover object-center"
+            loading="lazy"
+          />
         </div>
       </div>
 
@@ -183,7 +187,7 @@ export default function Info() {
 
       <div className="flex justify-center items-center gap-1 mb-6 font-light">
         <p>Drag to scroll </p>
-        <img src={arrow} alt="" className="h-4" />
+        <img src={arrow} alt="Scroll arrow" className="h-4" loading="lazy" />
       </div>
 
       <div
@@ -200,14 +204,19 @@ export default function Info() {
         {foodItems.map((item, i) => (
           <div
             key={item.id}
-            className={`bg-cover bg-center p-2 flex items-end justify-end text-white text-xs md:text-sm ${
+            className={`relative p-2 flex items-end justify-end text-white text-xs md:text-sm ${
               i % 2 === 1
                 ? "size-[200px] md:size-[400px]"
                 : "size-[150px] md:size-[300px]"
             } shrink-0 rounded-lg border border-gray-500`}
-            style={{ backgroundImage: `url(/foodimages/${item.url})` }}
           >
-            {item.id}
+            <img
+              src={`/foodimages/${item.url}`}
+              alt={item.id}
+              className="absolute inset-0 h-full w-full object-cover rounded-lg"
+              loading="lazy"
+            />
+            <span className="relative z-10">{item.id}</span>
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hamburger from "hamburger-react";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
 import phone from "../assets/icons8-phone-100.png";
@@ -145,7 +146,7 @@ const Navbar = () => {
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className="md:hidden glass-nav rounded-2xl m-2 overflow-hidden"
+            className="md:hidden glass-nav-mob rounded-2xl m-2 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-3 space-y-2">
               <div className="flex justify-between mb-4 mt-2">

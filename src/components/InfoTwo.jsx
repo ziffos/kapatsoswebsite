@@ -5,9 +5,10 @@ function InfoTwo() {
     <div class="flex justify-center">
       <div className=" md:w-[1200px] flex flex-col md:flex-row items-center md:h-[400px] h-[550px] bg-khaki mt-8 rounded-2xl shadow ">
         <div className="md:w-[800px] p-8 flex flex-col items-center gap-8">
+          <h1 className="md:text-2xl font-extrabold mb-4">CONTACT US</h1>
           <div className="flex justify-around w-full">
             <div className="text-center m-1">
-              <h1 className="md:text-xl font-bold mb-2">CONTACT</h1>
+              <h2 className="md:text-xl font-bold mb-2">CONTACT</h2>
               <p className="text-sm md:text-base font-light">
                 <span>
                   <a href="tel:+35725585897">+357 25 585897</a>
@@ -19,7 +20,7 @@ function InfoTwo() {
               </p>
             </div>
             <div className="text-center m-1">
-              <h1 className="md:text-xl font-bold mb-2">ADDRESS</h1>
+              <h2 className="md:text-xl font-bold mb-2">ADDRESS</h2>
               <p className="text-sm md:text-base font-light">
                 Georgiou Griva Digeni 46,
                 <br /> Limassol 3101, Cyprus
@@ -27,7 +28,7 @@ function InfoTwo() {
             </div>
           </div>
           <div className="text-center m-1">
-            <h1 className="md:text-xl font-bold mb-2">OPENING HOURS</h1>
+            <h2 className="md:text-xl font-bold mb-2">OPENING HOURS</h2>
             <p className="text-sm md:text-base font-light">
               Open Daily
               <br /> 10 am - 6 pm

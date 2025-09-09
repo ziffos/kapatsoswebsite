@@ -2,14 +2,12 @@ function Catering() {
   return (
     <div className=" flex flex-col  py-16 items-center px-2">
       <div className="mx-auto w-full max-w-[1200px] overflow-hidden rounded-2xl shadow md:h-[400px] flex flex-col md:flex-row">
-        <div
-          className="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/foodimages/Tortillas_with_chicken.webp')",
-          }}
-          role="img"
-          aria-label="Tortillas_with_chicken"
-        ></div>
+        <img
+          src="/foodimages/Tortillas_with_chicken.webp"
+          alt="Tortillas with chicken"
+          className="w-full md:w-1/2 h-56 md:h-auto object-cover object-center"
+          loading="lazy"
+        />
 
         <div className="w-full md:w-1/2 bg-khaki p-6 md:p-8 flex flex-col justify-center">
           <h1 className="text-2xl md:text-3xl font-extrabold">CATERING</h1>
@@ -30,6 +28,7 @@ function Catering() {
             <span>
               <a href="tel:+35725585897">+357 25 585897</a>
             </span>
+            .
           </p>
         </div>
       </div>
