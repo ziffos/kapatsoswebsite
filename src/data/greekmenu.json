@@ -1,930 +1,1382 @@
 [
   {
+    "id": "1",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Τζατζίκι",
-    "priceHalf": "3.80",
+    "priceHalf": "3,50",
     "sizeHalf": "½",
-    "priceOne": "6.40",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "2",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Ταραμοσαλάτα",
-    "priceHalf": "4.10",
+    "priceHalf": "3,50",
     "sizeHalf": "½",
-    "priceOne": "6.90",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "3",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Μελιτζανοσαλάτα",
-    "priceHalf": "4.80",
+    "priceHalf": "4,80",
     "sizeHalf": "½",
-    "priceOne": "7.80",
-    "sizeOne": "1"
+    "priceOne": "7,80",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "4",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Τυροκαυτερή",
-    "priceHalf": "4.90",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "7.90",
-    "sizeOne": "1"
+    "priceOne": "7,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "5",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Ταχίνι",
-    "priceHalf": "3.80",
+    "priceHalf": "3,40",
     "sizeHalf": "½",
-    "priceOne": "6.20",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "6",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Τυρί Φέτα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "2.50",
-    "sizeOne": "1pc"
+    "priceOne": "2,50",
+    "sizeOne": "1pc",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "7",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Σούπα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "4.90",
-    "sizeOne": ""
+    "priceOne": "4,90",
+    "sizeOne": "",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "8",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Σούπα με κρέας",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "5.10",
-    "sizeOne": ""
+    "priceOne": "5,10",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "9",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Γιαούρτι στραγγιστό",
-    "priceHalf": "2.50",
+    "priceHalf": "2,50",
     "sizeHalf": "200gr",
-    "priceOne": "4.30",
-    "sizeOne": "300gr"
+    "priceOne": "4,30",
+    "sizeOne": "300gr",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "10",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Γιαούρτι τσιπωτό",
-    "priceHalf": "2.50",
+    "priceHalf": "2,50",
     "sizeHalf": "200gr",
-    "priceOne": "4.30",
-    "sizeOne": "300gr"
+    "priceOne": "4,30",
+    "sizeOne": "300gr",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "11",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Γιαούρτι πρόβειο",
-    "priceHalf": "2.90",
+    "priceHalf": "2,90",
     "sizeHalf": "200gr",
-    "priceOne": "4.90",
-    "sizeOne": "400gr"
+    "priceOne": "4,90",
+    "sizeOne": "400gr",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "12",
     "category": "ΟΡΕΚΤΙΚΑ",
     "foodItem": "Ψωμί",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "1.40",
-    "sizeOne": "1pc"
+    "priceOne": "1,40",
+    "sizeOne": "1pc",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "13",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Χωριάτικη σαλάτα",
-    "priceHalf": "2.80",
+    "priceHalf": "2,80",
     "sizeHalf": "½",
-    "priceOne": "4.00",
-    "sizeOne": "1"
+    "priceOne": "4,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "14",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Πολίτικη σαλάτα",
-    "priceHalf": "2.90",
+    "priceHalf": "2,90",
     "sizeHalf": "½",
-    "priceOne": "4.80",
-    "sizeOne": "1"
+    "priceOne": "4,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "15",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Σαλάτα του καίσαρα",
-    "priceHalf": "4.10",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "6.10",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "16",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Μεσογειακή",
-    "priceHalf": "2.80",
+    "priceHalf": "2,50",
     "sizeHalf": "½",
-    "priceOne": "4.40",
-    "sizeOne": "1"
+    "priceOne": "3,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "17",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Κόλσλοου",
-    "priceHalf": "3.90",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "18",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Ταμπούλι",
-    "priceHalf": "3.10",
+    "priceHalf": "3,10",
     "sizeHalf": "½",
-    "priceOne": "5.20",
-    "sizeOne": "1"
+    "priceOne": "5,20",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "19",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Σαλάτα με θαλασσινά",
-    "priceHalf": "4.50",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "7.30",
-    "sizeOne": "1"
+    "priceOne": "7,30",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "20",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Παντζαροσαλάτα",
-    "priceHalf": "3.30",
+    "priceHalf": "3,30",
     "sizeHalf": "½",
-    "priceOne": "4.90",
-    "sizeOne": "1"
+    "priceOne": "4,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "21",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Ρωσική σαλάτα",
-    "priceHalf": "4.10",
+    "priceHalf": "4,10",
     "sizeHalf": "½",
-    "priceOne": "7.50",
-    "sizeOne": "1"
+    "priceOne": "7,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "22",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Σαλάτα με τόνο",
-    "priceHalf": "3.10",
+    "priceHalf": "3,10",
     "sizeHalf": "½",
-    "priceOne": "5.50",
-    "sizeOne": "1"
+    "priceOne": "5,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "23",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Σαλάτα με ρόδι",
-    "priceHalf": "3.60",
+    "priceHalf": "3,60",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "24",
     "category": "ΣΑΛΑΤΕΣ",
     "foodItem": "Φρουτοσαλάτα",
-    "priceHalf": "3.90",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "6.50",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "25",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Φασόλια γίγαντες",
-    "priceHalf": "4.90",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "7.50",
-    "sizeOne": "1"
+    "priceOne": "7,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "26",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Φασόλια γιαχνί",
-    "priceHalf": "3.90",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "5.80",
-    "sizeOne": "1"
+    "priceOne": "6,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "27",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Φασόλια βραστά",
-    "priceHalf": "3.80",
+    "priceHalf": "3,60",
     "sizeHalf": "½",
-    "priceOne": "5.80",
-    "sizeOne": "1"
+    "priceOne": "5,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "28",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Φακές",
-    "priceHalf": "4.10",
+    "priceHalf": "3,60",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "6,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "29",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Ρεβύθια",
-    "priceHalf": "4.50",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "7.00",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "30",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Λουβί φρέσκο",
-    "priceHalf": "4.60",
+    "priceHalf": "5,00",
     "sizeHalf": "½",
-    "priceOne": "7.30",
-    "sizeOne": "1"
+    "priceOne": "7,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "31",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Λουβί ξερό",
-    "priceHalf": "3.80",
+    "priceHalf": "3,60",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "6,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "32",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Κουκιά φρέσκα",
-    "priceHalf": "4.40",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "7.30",
-    "sizeOne": "1"
+    "priceOne": "7,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "33",
     "category": "ΟΣΠΡΙΑ",
     "foodItem": "Κουκιά ξερά",
-    "priceHalf": "3.80",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "6,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "34",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Κοτόπουλο σουβλάκι",
-    "priceHalf": "3.80",
+    "priceHalf": "4,60",
     "sizeHalf": "1pc",
-    "priceOne": "7.90",
-    "sizeOne": "2pcs"
+    "priceOne": "8,70",
+    "sizeOne": "2pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "35",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Κοτόπουλο φιλέτο",
-    "priceHalf": "3.90",
+    "priceHalf": "5,30",
     "sizeHalf": "1pc",
-    "priceOne": "7.90",
-    "sizeOne": "2pcs"
+    "priceOne": "8,90",
+    "sizeOne": "2pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "36",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Χοιρινό σουβλάκι",
-    "priceHalf": "3.00",
+    "priceHalf": "4,40",
     "sizeHalf": "1pc",
-    "priceOne": "7.60",
-    "sizeOne": "2pcs"
+    "priceOne": "8,30",
+    "sizeOne": "2pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "37",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Χοιρινή μπριζόλα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "8.90",
-    "sizeOne": ""
+    "priceOne": "10,50",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "38",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Χοιρινές πανσέτες",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "8.90",
-    "sizeOne": "3pcs"
+    "priceOne": "10,00",
+    "sizeOne": "3pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "39",
     "category": "ΣΧΑΡΑΣ",
     "foodItem": "Χοιρινό μπιφτέκι",
-    "priceHalf": "3.70",
+    "priceHalf": "4,60",
     "sizeHalf": "1pc",
-    "priceOne": "7.90",
-    "sizeOne": "2pcs"
+    "priceOne": "8,50",
+    "sizeOne": "2pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
-    "category": "ΣΧΑΡΑΣ",
-    "foodItem": "Βοδινό μπιφτέκι",
-    "priceHalf": "4.40",
-    "sizeHalf": "1pc",
-    "priceOne": "7.30",
-    "sizeOne": "2pcs"
-  },
-  {
+    "id": "40",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο ψησταριάς",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "10.90",
-    "sizeOne": ""
+    "priceOne": "10,90",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "41",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "1/2 κοτόπουλο ψησταριάς",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "6.50",
-    "sizeOne": ""
+    "priceOne": "6,50",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "42",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "1/4 κοτόπουλο ψησταριάς",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "4.90",
-    "sizeOne": ""
+    "priceOne": "4,40",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "43",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο σούβλα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "14.50",
-    "sizeOne": "/kg"
+    "priceOne": "15,90",
+    "sizeOne": "/kg",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "44",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Φτερούγες κοτόπουλου τηγανητές",
-    "priceHalf": "3.80",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "6.90",
-    "sizeOne": "1"
+    "priceOne": "7,80",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "45",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Σνίτσελ κοτόπουλο",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "7.90",
-    "sizeOne": "1pc"
+    "priceOne": "8,00",
+    "sizeOne": "1pc",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "46",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο κόρμα",
-    "priceHalf": "5.80",
+    "priceHalf": "5,80",
     "sizeHalf": "½",
-    "priceOne": "9.20",
-    "sizeOne": "1"
+    "priceOne": "10,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "47",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κάρυ κοτόπουλο",
-    "priceHalf": "4.90",
+    "priceHalf": "5,50",
     "sizeHalf": "½",
-    "priceOne": "8.30",
-    "sizeOne": "1"
+    "priceOne": "9,30",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "48",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο στο φούρνο με πατάτες",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "7.90",
-    "sizeOne": "1"
+    "priceOne": "8,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "49",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο με γκυκοξινη σάλτσα",
-    "priceHalf": "4.95",
+    "priceHalf": "5,80",
     "sizeHalf": "½",
-    "priceOne": "8.40",
-    "sizeOne": "1"
+    "priceOne": "8,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "50",
     "category": "ΚΟΤΟΠΟΥΛΟ",
     "foodItem": "Κοτόπουλο τηγανητό",
-    "priceHalf": "4.90",
+    "priceHalf": "5,50",
     "sizeHalf": "3pcs",
-    "priceOne": "8.90",
-    "sizeOne": "6pcs"
+    "priceOne": "8,90",
+    "sizeOne": "6pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "51",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Χοιρινή σούβλα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "17.30",
-    "sizeOne": "/kg"
+    "priceOne": "19,90",
+    "sizeOne": "/kg",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "52",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Παϊδάκια με μπαρμπεκιού",
-    "priceHalf": "5.20",
+    "priceHalf": "5,80",
     "sizeHalf": "½",
-    "priceOne": "9.40",
-    "sizeOne": "1"
+    "priceOne": "10,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "53",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Αφέλια",
-    "priceHalf": "4.90",
+    "priceHalf": "5,50",
     "sizeHalf": "½",
-    "priceOne": "8.90",
-    "sizeOne": "1"
+    "priceOne": "8,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "54",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Χοιρινό με σάλτσα νταϊάν",
-    "priceHalf": "5.10",
+    "priceHalf": "6,50",
     "sizeHalf": "½",
-    "priceOne": "9.10",
-    "sizeOne": "1"
+    "priceOne": "10,80",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "55",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Κεφτέδες",
-    "priceHalf": "4.80",
+    "priceHalf": "4,60",
     "sizeHalf": "½",
-    "priceOne": "7.80",
-    "sizeOne": "1"
+    "priceOne": "7,80",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "56",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Ρόστο",
-    "priceHalf": "4.40",
+    "priceHalf": "8,50",
     "sizeHalf": "½",
-    "priceOne": "7.90",
-    "sizeOne": "1"
+    "priceOne": "7,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "57",
+    "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
+    "foodItem": "Κοντοσούβλι",
+    "priceHalf": "",
+    "sizeHalf": "",
+    "priceOne": "21,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
+  },
+  {
+    "id": "58",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Στιφάδο βοδινό",
-    "priceHalf": "5.60",
+    "priceHalf": "6,50",
     "sizeHalf": "½",
-    "priceOne": "9.30",
-    "sizeOne": "1"
+    "priceOne": "9,60",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "59",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Κλέφτικο με πατάτες",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "11.00",
-    "sizeOne": "1"
+    "priceOne": "11,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "60",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Ρέσι",
-    "priceHalf": "5.30",
+    "priceHalf": "5,90",
     "sizeHalf": "½",
-    "priceOne": "9.90",
-    "sizeOne": "1"
+    "priceOne": "10,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "61",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Αρνί σούβλα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "25.60",
-    "sizeOne": "/kg"
+    "priceOne": "25,90",
+    "sizeOne": "/kg",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "62",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Αρνί με πατάτες στο φούρνο",
-    "priceHalf": "6.40",
+    "priceHalf": "6,50",
     "sizeHalf": "½",
-    "priceOne": "11.00",
-    "sizeOne": "1"
+    "priceOne": "11,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "63",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Τταβάς αρνίσιος",
-    "priceHalf": "6.40",
+    "priceHalf": "6,50",
     "sizeHalf": "½",
-    "priceOne": "11.00",
-    "sizeOne": "1"
+    "priceOne": "11,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "64",
     "category": "ΑΡΝΙ, ΧΟΙΡΙΝΟ & ΒΟΔΙΝΟ",
     "foodItem": "Συκωτάκι αρνίσιο",
-    "priceHalf": "5.40",
+    "priceHalf": "5,50",
     "sizeHalf": "½",
-    "priceOne": "8.90",
-    "sizeOne": "1"
+    "priceOne": "9,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "65",
     "category": "ΘΑΛΑΣΣΙΝΑ",
     "foodItem": "Ψάρι πανέ τηγανητό",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "3.75",
-    "sizeOne": "1pc"
+    "priceOne": "4,00",
+    "sizeOne": "1pc",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "66",
     "category": "ΘΑΛΑΣΣΙΝΑ",
     "foodItem": "Καλαμάρι τηγανητό",
-    "priceHalf": "4.95",
+    "priceHalf": "6,80",
     "sizeHalf": "½",
-    "priceOne": "9.95",
-    "sizeOne": "1"
+    "priceOne": "13,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "67",
     "category": "ΘΑΛΑΣΣΙΝΑ",
     "foodItem": "Χταπόδι καθιστό",
-    "priceHalf": "5.95",
+    "priceHalf": "7,00",
     "sizeHalf": "½",
-    "priceOne": "9.95",
-    "sizeOne": "1"
+    "priceOne": "10,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "68",
     "category": "ΘΑΛΑΣΣΙΝΑ",
     "foodItem": "Ψάρι με τηγανητές πατάτες",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "13.00",
-    "sizeOne": ""
+    "priceOne": "9,00",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "69",
     "category": "ΘΑΛΑΣΣΙΝΑ",
-    "foodItem": "Σολωμός φιλέτο",
+    "foodItem": "Τυλιγμένος Καπνιστός Σολομός",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "11.00",
-    "sizeOne": ""
+    "priceOne": "7,00",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "70",
     "category": "ΘΑΛΑΣΣΙΝΑ",
     "foodItem": "Τσιπούρα",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "11.00",
-    "sizeOne": ""
+    "priceOne": "12,00",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "TRUE"
   },
   {
+    "id": "71",
+    "category": "ΘΑΛΑΣΣΙΝΑ",
+    "foodItem": "Αθερίνα/Μαρίδα",
+    "priceHalf": "5,00",
+    "sizeHalf": "½",
+    "priceOne": "7,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
+  },
+  {
+    "id": "72",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Καρμπονάρα",
-    "priceHalf": "4.80",
+    "priceHalf": "5,50",
     "sizeHalf": "½",
-    "priceOne": "8.00",
-    "sizeOne": "1"
+    "priceOne": "8,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "73",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Παστίτσιο",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "7.30",
-    "sizeOne": ""
+    "priceOne": "6,90",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "74",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Λαζάνια",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "7.90",
-    "sizeOne": ""
+    "priceOne": "7,90",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "75",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Λαζάνια χορτοφαγικά",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "7.40",
-    "sizeOne": ""
+    "priceOne": "7,30",
+    "sizeOne": "",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "76",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Μπολονέζ",
-    "priceHalf": "4.50",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "7.30",
-    "sizeOne": "1"
+    "priceOne": "7,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "77",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Μακαρόνια κοτόπουλο",
-    "priceHalf": "4.90",
+    "priceHalf": "5,00",
     "sizeHalf": "½",
-    "priceOne": "8.30",
-    "sizeOne": "1"
+    "priceOne": "7,20",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "78",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Μακαρόνια με λαχανικά",
-    "priceHalf": "4.40",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "7.00",
-    "sizeOne": "1"
+    "priceOne": "6,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "79",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Κριθαράκι",
-    "priceHalf": "3.10",
+    "priceHalf": "3,80",
     "sizeHalf": "½",
-    "priceOne": "4.90",
-    "sizeOne": "1"
+    "priceOne": "5,70",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "80",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Κριθαράκι με κιμά",
-    "priceHalf": "",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "",
-    "sizeOne": "1"
+    "priceOne": "7,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "81",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Μακαρόνια σολωμό και λαχανικά",
-    "priceHalf": "4.80",
+    "priceHalf": "5,80",
     "sizeHalf": "½",
-    "priceOne": "7.90",
-    "sizeOne": "1"
+    "priceOne": "8,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "82",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Κινεζικά νούντλς με κοτόπουλο",
-    "priceHalf": "3.50",
+    "priceHalf": "6,00",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "9,80",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "83",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Κινεζικά νούντλς με λαχανικά",
-    "priceHalf": "4.90",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "8.30",
-    "sizeOne": "1"
+    "priceOne": "7,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "84",
     "category": "ΖΥΜΑΡΙΚΑ",
     "foodItem": "Κινεζικά νούντλς με θαλασσινά",
-    "priceHalf": "5.90",
+    "priceHalf": "7,00",
     "sizeHalf": "½",
-    "priceOne": "9.30",
-    "sizeOne": "1"
+    "priceOne": "10,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "85",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Μουσακάς",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "8.00",
-    "sizeOne": ""
+    "priceOne": "7,30",
+    "sizeOne": "",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "86",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Γεμιστά",
-    "priceHalf": "5.90",
+    "priceHalf": "4,90",
     "sizeHalf": "2pcs",
-    "priceOne": "8.90",
-    "sizeOne": "4pcs"
+    "priceOne": "8,50",
+    "sizeOne": "4pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "87",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κανελόνια",
-    "priceHalf": "3.90",
+    "priceHalf": "4,30",
     "sizeHalf": "2pcs",
-    "priceOne": "6.90",
-    "sizeOne": "4pcs"
+    "priceOne": "7,70",
+    "sizeOne": "4pcs",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "88",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Λαχανικά μπριάμ",
-    "priceHalf": "4.30",
+    "priceHalf": "4,80",
     "sizeHalf": "½",
-    "priceOne": "6.80",
-    "sizeOne": "1"
+    "priceOne": "7,60",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "89",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Λαχανοκεφτέδες",
-    "priceHalf": "4.80",
+    "priceHalf": "4,70",
     "sizeHalf": "½",
-    "priceOne": "7.80",
-    "sizeOne": "1"
+    "priceOne": "7,60",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "90",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Παπουτσάκια",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "5.10",
-    "sizeOne": "1pc"
+    "priceOne": "7,50",
+    "sizeOne": "1pc",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "91",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κουπέπια",
-    "priceHalf": "4.10",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "7.80",
-    "sizeOne": "1"
+    "priceOne": "8,00",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "92",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Λαχανικά βραστά",
-    "priceHalf": "2.70",
+    "priceHalf": "3,20",
     "sizeHalf": "½",
-    "priceOne": "4.50",
-    "sizeOne": "1"
+    "priceOne": "4,80",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "93",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Λαχανικά σχάρας",
-    "priceHalf": "2.80",
+    "priceHalf": "3,50",
     "sizeHalf": "½",
-    "priceOne": "5.20",
-    "sizeOne": "1"
+    "priceOne": "5,80",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "94",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Άνθοί γεμιστοί",
-    "priceHalf": "4.40",
+    "priceHalf": "4,80",
     "sizeHalf": "½",
-    "priceOne": "7.20",
-    "sizeOne": "1"
+    "priceOne": "7,60",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "95",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κολοκάσι γιαχνί",
-    "priceHalf": "4.40",
+    "priceHalf": "4,60",
     "sizeHalf": "½",
-    "priceOne": "7.40",
-    "sizeOne": "1"
+    "priceOne": "7,80",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "96",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κολοκάσι με κρέας",
-    "priceHalf": "5.30",
+    "priceHalf": "5,90",
     "sizeHalf": "½",
-    "priceOne": "8.90",
-    "sizeOne": "1"
+    "priceOne": "8,90",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "97",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Πούλλες",
-    "priceHalf": "4.60",
+    "priceHalf": "4,90",
     "sizeHalf": "½",
-    "priceOne": "7.80",
-    "sizeOne": "1"
+    "priceOne": "7,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "TRUE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "98",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Μανιταράκια",
-    "priceHalf": "4.90",
+    "priceHalf": "4,20",
     "sizeHalf": "½",
-    "priceOne": "7.60",
-    "sizeOne": "1"
+    "priceOne": "7,40",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "99",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κουνουπίδι τηγανιτό",
-    "priceHalf": "3.40",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.30",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "100",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Πουργούρι",
-    "priceHalf": "2.40",
+    "priceHalf": "3,00",
     "sizeHalf": "½",
-    "priceOne": "3.80",
-    "sizeOne": "1"
+    "priceOne": "4,30",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "101",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Φασολάκι γιαχνί",
-    "priceHalf": "4.10",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "6.90",
-    "sizeOne": "1"
+    "priceOne": "7,30",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "102",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Μπάμιες",
-    "priceHalf": "4.10",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "6.90",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "103",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Μπιζέλι",
-    "priceHalf": "4.10",
+    "priceHalf": "4,50",
     "sizeHalf": "½",
-    "priceOne": "6.90",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
-    "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
-    "foodItem": "Φαλάφελ",
-    "priceHalf": "4.40",
-    "sizeHalf": "½",
-    "priceOne": "7.20",
-    "sizeOne": "1"
-  },
-  {
-    "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
-    "foodItem": "Σπρινγκ ρολς λαχανικών",
-    "priceHalf": "3.40",
-    "sizeHalf": "2pcs",
-    "priceOne": "6.00",
-    "sizeOne": "4pcs"
-  },
-  {
+    "id": "104",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
     "foodItem": "Κολοκυθάκια με αυγά τηγανητά",
-    "priceHalf": "3.90",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "6.30",
-    "sizeOne": "1"
+    "priceOne": "6,50",
+    "sizeOne": "1",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "105",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
-    "foodItem": "Τορτίγιας (Βοδίνο ή κοτόπουλο)",
+    "foodItem": "Τορτίγιας (κοτόπουλο)",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "5.50",
-    "sizeOne": "1pc"
+    "priceOne": "5,90",
+    "sizeOne": "1pc",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "106",
     "category": "ΔΙΕΘΝΗΣ ΚΟΥΖΙΝΑ",
-    "foodItem": "Λαχματζούν",
+    "foodItem": "Τορτίγιας (βοδίνο)",
     "priceHalf": "",
     "sizeHalf": "",
-    "priceOne": "3.50",
-    "sizeOne": "1pc"
+    "priceOne": "6,90",
+    "sizeOne": "1pc",
+    "vegetarian": "FALSE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "107",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Πατάτες τηγανιτές",
-    "priceHalf": "2.30",
+    "priceHalf": "3,00",
     "sizeHalf": "½",
-    "priceOne": "3.50",
-    "sizeOne": "1"
+    "priceOne": "4,20",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "108",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Πατάτες του φούρνου",
-    "priceHalf": "2.90",
+    "priceHalf": "3,60",
     "sizeHalf": "½",
-    "priceOne": "4.10",
-    "sizeOne": "1"
+    "priceOne": "5,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "109",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Πατάτες πουρέ",
-    "priceHalf": "3.60",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.10",
-    "sizeOne": "1"
+    "priceOne": "5,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "110",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Πατάτες αντιναχτές",
-    "priceHalf": "3.50",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.10",
-    "sizeOne": "1"
+    "priceOne": "5,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "111",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Ρύζι σκέτο",
-    "priceHalf": "1.90",
+    "priceHalf": "2,50",
     "sizeHalf": "½",
-    "priceOne": "3.10",
-    "sizeOne": "1"
+    "priceOne": "3,50",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "112",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Σπανακόρυζο",
-    "priceHalf": "2.90",
+    "priceHalf": "3,40",
     "sizeHalf": "½",
-    "priceOne": "4.80",
-    "sizeOne": "1"
+    "priceOne": "5,00",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "113",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Ρύζι με λαχανικά",
-    "priceHalf": "3.00",
+    "priceHalf": "3,30",
     "sizeHalf": "½",
-    "priceOne": "4.80",
-    "sizeOne": "1"
+    "priceOne": "4,70",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "114",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Ρύζι κάρυ",
-    "priceHalf": "3.60",
+    "priceHalf": "3,90",
     "sizeHalf": "½",
-    "priceOne": "5.80",
-    "sizeOne": "1"
+    "priceOne": "5,60",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   },
   {
+    "id": "115",
     "category": "ΡΥΖΙΑ & ΠΑΤΑΤΕΣ",
     "foodItem": "Ρύζι τηγανιτό",
-    "priceHalf": "3.60",
+    "priceHalf": "4,30",
     "sizeHalf": "½",
-    "priceOne": "5.90",
-    "sizeOne": "1"
+    "priceOne": "5,90",
+    "sizeOne": "1",
+    "vegetarian": "TRUE",
+    "seasonal": "FALSE",
+    "sidedish": "FALSE"
   }
 ]
