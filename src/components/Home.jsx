@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, MotionConfig } from "framer-motion";
-import kapatsoslogo from "../assets/kapatsoslogo.png";
 import facebook from "../assets/icons8-facebook-96.png";
 import instagram from "../assets/icons8-instagram-96.png";
 import foody from "../assets/foody.png";
@@ -51,7 +50,7 @@ const Home = () => {
 
         <div className="flex flex-col flex-grow items-center justify-center mb-22 z-10">
           <img
-            src={kapatsoslogo}
+            src="/kapatsoslogo.webp"
             alt="Kapatsos logo"
             className="w-[230px] md:w-[300px] lg:w-[350px] mb-10 mt-4"
           />

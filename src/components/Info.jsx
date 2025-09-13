@@ -152,7 +152,7 @@ export default function Info() {
               dedicated to sharing the authentic flavors and traditions of our
               island with every visitor. Whether you are a local or a traveler
               discovering Cyprus, our goal is to make you feel at home and give
-              you a memorable experience.
+              you a memorable experience..
             </p>
           </div>
         </div>

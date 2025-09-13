@@ -1,10 +1,8 @@
-import kapatsoslogo from "../assets/kapatsoslogo.png";
-
 function Footer() {
   return (
     <div className="w-full  bg-[#1b464a] mt-32 flex flex-col items-center text-center gap-10 py-10 p-2 ">
       <img
-        src={kapatsoslogo}
+        src="/kapatsoslogo.webp"
         alt="Kapatsos logo"
         className="h-30"
         loading="lazy"
