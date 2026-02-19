@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from "react";
 import englishMenu from "../data/englishmenu.json";
 import greekmenu from "../data/greekmenu.json";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 // --- Sub-component for a single category section ---
 const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
