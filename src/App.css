@@ -8,6 +8,18 @@
   --color-sunset: #f5d09eff;
   --color-black: #000000ff;
   --color-khaki: #b2ab9dff;
+  
+  --font-heading: "Roboto Condensed", sans-serif;
+  --font-body: "Lato", sans-serif;
+}
+
+/* Apply global font defaults */
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
 }
 
 @utility no-scrollbar {
