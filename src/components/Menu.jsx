@@ -96,7 +96,7 @@ function Menu() {
         <div className="w-full md:w-[1200px] md:grid flex flex-col md:grid-cols-[1fr_5fr] md:gap-8 gap-4 ">
           {/* CATEGORY STRIP */}
           <div
-            className="relative flex md:flex-col gap-2 md:gap-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory
+            className="sticky top-[80px] md:top-[85px] z-40 relative flex md:flex-col gap-2 md:gap-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory
            [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pb-2"
           >
             {eCategories.map((cat) => {

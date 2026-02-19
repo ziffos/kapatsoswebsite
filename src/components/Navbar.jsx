@@ -1,10 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
 import phone from "../assets/icons8-phone-100.png";
 import plate from "../assets/icons8-plate-100.png";
+
+// Helper to check if open (10:00 - 18:00, Closed Tuesdays)
+function useIsOpen() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const checkTime = () => {
+      // Create date object for Cyprus time (approximate for EU/Athens timezone)
+      const now = new Date();
+      // Adjust to UTC+3 (EEST) or UTC+2 (EET) roughly by using local if user is in Cyprus
+      // Or simply use getDay/getHours if the user is viewing from Cyprus.
+      
+      const day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue...
+      const hour = now.getHours();
+
+      // Closed on Tuesdays (day 2)
+      if (day === 2) {
+        setIsOpen(false);
+        return;
+      }
+
+      // Open 10:00 to 18:00
+      if (hour >= 10 && hour < 18) {
+        setIsOpen(true);
+      } else {
+        setIsOpen(false);
+      }
+    };
+
+    checkTime();
+    const interval = setInterval(checkTime, 60000); // check every minute
+    return () => clearInterval(interval);
+  }, []);
+
+  return isOpen;
+}
 
 const dropdownVariants = {
   hidden: { opacity: 0, y: -8, scale: 0.98, filter: "blur(4px)" },
@@ -36,8 +72,9 @@ const itemVariants = {
 };
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
+  const isShopOpen = useIsOpen();
 
   // Define nav links -> these match section IDs in App.jsx
   const navLinks = [
@@ -52,7 +89,7 @@ const Navbar = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // close mobile menu
+      setIsOpenMenu(false); // close mobile menu
     }
   };
 
@@ -72,7 +109,7 @@ const Navbar = () => {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.96, y: 0 }}
           transition={{ type: "spring", stiffness: 500, damping: 32 }}
-          className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer"
+          className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer relative"
         >
           <img src={plate} alt="Menu" className="h-[20px]" />
           FOOD MENU
@@ -86,9 +123,7 @@ const Navbar = () => {
               onClick={() => handleScroll(link.id)}
               onMouseEnter={() => setHoveredLink(link.name)}
               onMouseLeave={() => setHoveredLink(null)}
-              whileHover={{ y: -1, scale: 1.02 }}
-              whileTap={{ scale: 0.96 }}
-              className="relative cursor-pointer [text-shadow:0_1px_2px_rgba(0,0,0,0.7)]"
+              whileHover={{ y: -1, scale: 1.02 }}\n              whileTap={{ scale: 0.96 }}\n              className="relative cursor-pointer [text-shadow:0_1px_2px_rgba(0,0,0,0.7)]"
             >
               {link.name}
               {hoveredLink === link.name && (
@@ -102,14 +137,20 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right chip (phone) */}
+        {/* Right chip (phone) with LIVE indicator */}
         <a href="tel:25585897" className="block">
           <motion.div
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.96, y: 0 }}
             transition={{ type: "spring", stiffness: 500, damping: 32 }}
-            className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer"
+            className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer relative"
           >
+            <div className="relative flex items-center justify-center w-[12px] h-[12px] mr-1">
+              {isShopOpen && (
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+              )}
+              <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${isShopOpen ? 'bg-green-400' : 'bg-red-400'}`}></span>
+            </div>
             <img src={phone} alt="Phone" className="h-[20px]" />
             25 585897
           </motion.div>
@@ -124,12 +165,12 @@ const Navbar = () => {
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         >
           <Hamburger
-            toggled={isOpen}
-            toggle={setIsOpen}
+            toggled={isOpenMenu}
+            toggle={setIsOpenMenu}
             size={32}
             rounded
             distance="sm"
-            label={isOpen ? "Close menu" : "Open menu"}
+            label={isOpenMenu ? "Close menu" : "Open menu"}
             color="white"
           />
         </motion.div>
@@ -137,7 +178,7 @@ const Navbar = () => {
 
       {/* Mobile dropdown with animation */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpenMenu && (
           <motion.div
             key="dropdown"
             role="menu"
@@ -161,13 +202,19 @@ const Navbar = () => {
                   FOOD MENU
                 </motion.div>
 
-                {/* Mobile phone */}
+                {/* Mobile phone with LIVE indicator */}
                 <a href="tel:25585897">
                   <motion.div
                     variants={itemVariants}
                     whileTap={{ scale: 0.96 }}
                     className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer"
                   >
+                     <div className="relative flex items-center justify-center w-[12px] h-[12px] mr-1">
+                      {isShopOpen && (
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+                      )}
+                      <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${isShopOpen ? 'bg-green-400' : 'bg-red-400'}`}></span>
+                    </div>
                     <img src={phone} alt="Phone" className="h-[20px]" />
                     25 585897
                   </motion.div>
