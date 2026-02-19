@@ -7,6 +7,7 @@ import InfoTwo from "./components/InfoTwo";
 import Footer from "./components/Footer";
 
 function App() {
+  // Last updated: Force Deploy Trigger
   return (
     <div className="bg-platinum w-full">
       <section id="home">
