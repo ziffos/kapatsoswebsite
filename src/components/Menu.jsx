@@ -1,211 +1,190 @@
 import React, { useState, useMemo, useEffect } from "react";
 import englishMenu from "../data/englishmenu.json";
 import greekmenu from "../data/greekmenu.json";
-// eslint-disable-next-line no-unused-vars
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
-function Menu() {
-  // language + data
-  const [language, setLanguage] = useState("en");
-  const menus = { en: englishMenu, el: greekmenu };
-  const [menu, setMenu] = useState(menus[language]);
-
-  // recompute categories whenever the menu changes
-  const eCategories = useMemo(
-    () => [...new Set(menu.map((item) => item.category))],
-    [menu]
-  );
-
-  // make sure activeCategory is valid for the current language/menu
-  const [activeCategory, setActiveCategory] = useState(eCategories[0]);
-  useEffect(() => {
-    setMenu(menus[language]); // swap the data set
-  }, [language]);
-
-  useEffect(() => {
-    // reset to first category whenever the menu dataset changes
-    if (eCategories.length) setActiveCategory(eCategories[0]);
-  }, [eCategories]);
-
-  const prefersReduced = useReducedMotion();
-
-  const visibleItems = useMemo(
-    () => menu.filter((i) => i.category === activeCategory),
-    [menu, activeCategory] // depend on both!
-  );
-
-  // simple label dictionary
-  const t = {
-    en: { title: "MENU", one: "1 portion", half: "½ portion" },
-    el: { title: "ΜΕΝΟΥ", one: "1 μερίδα", half: "½ μερίδα" },
-  };
-
-  // Variants
-  const containerVariants = {
-    hidden: { opacity: 0, y: -8, filter: "blur(4px)" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: prefersReduced ? 0 : 0.25,
-        when: "beforeChildren",
-        staggerChildren: prefersReduced ? 0 : 0.04,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 8,
-      filter: "blur(3px)",
-      transition: { duration: 0.18 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 8 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.18 } },
-    exit: { opacity: 0, y: -6, transition: { duration: 0.12 } },
-  };
-
-  const handleChange = (e) => {
-    const nextLang = e.target.value; // "en" or "el"
-    setLanguage(nextLang); // triggers the effects above
-    console.log("Language changed to:", nextLang);
-  };
+// --- Sub-component for a single category section ---
+const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
+  // On desktop, we force it open. On mobile, we respect the state.
+  const showContent = isDesktop || isOpen;
 
   return (
-    <>
-      <div className="flex flex-col items-center py-16">
-        <div className="w-full md:w-[1200px] p-4 flex justify-end items-center mb-8">
-          <h1 className="mx-auto text-4xl font-bold text-center  relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-teal-600 after:mx-auto after:mt-2">
-            {t[language].title}
-          </h1>
-          <div>
-            <select
-              id="language"
-              className="bg-[#1b464a] text-white rounded-2xl p-1 cursor-pointer"
-              value={language}
-              onChange={handleChange}
-            >
-              <option value="en">EN</option>
-              <option value="el">ΕΛ</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="w-full md:w-[1200px] md:grid flex flex-col md:grid-cols-[1fr_5fr] md:gap-8 gap-4 ">
-          {/* CATEGORY STRIP */}
-          <div
-            className="sticky top-[80px] md:top-[85px] z-40 relative flex md:flex-col gap-2 md:gap-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory
-           [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pb-2"
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col h-full">
+      {/* Header - Clickable on Mobile */}
+      <button
+        onClick={onToggle}
+        className={`w-full flex justify-between items-center p-4 text-left transition-colors duration-200 
+          ${isDesktop ? "cursor-default bg-[#1b464a] text-white" : "cursor-pointer bg-gray-50 hover:bg-gray-100"}`}
+        aria-expanded={showContent}
+      >
+        <h2
+          className={`text-xl md:text-2xl font-bold font-heading tracking-wide 
+          ${isDesktop ? "text-white" : "text-[#1b464a]"}`}
+        >
+          {title}
+        </h2>
+        {/* Chevron only on mobile */}
+        {!isDesktop && (
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+            className="text-[#1b464a]"
           >
-            {eCategories.map((cat) => {
-              const isActive = cat === activeCategory;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setActiveCategory(cat)}
-                  aria-pressed={isActive}
-                  className={`relative first:ml-2 last:mr-2 md:first:ml-0 md:last:mr-0 flex py-2 px-4 items-center justify-center cursor-pointer rounded-full text-white shadow-[0_4px_0_rgba(0,0,0)] transition duration-150
-                    ${
-                      isActive
-                        ? "font-bold"
-                        : "font-light opacity-95 hover:opacity-80"
-                    }
-                    bg-[#1b464a]`}
-                  style={{ zIndex: 1 }}
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </motion.div>
+        )}
+      </button>
+
+      {/* Content - Collapsible on Mobile, Static on Desktop */}
+      <AnimatePresence initial={false}>
+        {showContent && (
+          <motion.div
+            initial={isDesktop ? false : { height: 0, opacity: 0 }}
+            animate={isDesktop ? false : { height: "auto", opacity: 1 }}
+            exit={isDesktop ? false : { height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="p-4 pt-2 bg-white flex flex-col gap-3">
+              {/* Legend for sizes (only show once per card for cleaner look) */}
+              <div className="flex justify-end text-xs text-gray-400 font-bold uppercase tracking-wider mb-1 border-b border-gray-100 pb-1">
+                <span className="w-16 text-right">{t.one}</span>
+                <span className="w-16 text-right">{t.half}</span>
+              </div>
+
+              {items.map((item) => (
+                <div
+                  key={item.id}
+                  className="grid grid-cols-[1fr_auto_auto] gap-2 items-baseline group"
                 >
-                  {isActive && (
-                    <motion.span
-                      layoutId="cat-pill"
-                      className="absolute inset-0 rounded-full bg-teal-700"
-                      transition={{
-                        type: "spring",
-                        stiffness: 500,
-                        damping: 40,
-                      }}
-                      aria-hidden
-                    />
-                  )}
-                  <span className="relative">{cat}</span>
-                </button>
-              );
-            })}
+                  {/* Name */}
+                  <div className="relative overflow-hidden">
+                    <span className="text-gray-800 font-medium md:text-lg group-hover:text-[#ed1c23] transition-colors">
+                      {item.foodItem}
+                    </span>
+                    {/* Dotted leader visual hack */}
+                    <span className="absolute bottom-1 ml-1 text-gray-300 w-full whitespace-nowrap overflow-hidden">
+                      ........................................................................
+                    </span>
+                  </div>
+
+                  {/* Price 1 (Full) */}
+                  <div className="w-16 text-right font-bold text-gray-700">
+                    {item.priceOne ? `€${item.priceOne}` : "-"}
+                  </div>
+
+                  {/* Price 1/2 (Half) */}
+                  <div className="w-16 text-right font-medium text-gray-500 text-sm">
+                    {item.priceHalf ? `€${item.priceHalf}` : ""}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+function Menu() {
+  const [language, setLanguage] = useState("en");
+  // Simple check for desktop viewport (hook-based for reactivity)
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => setIsDesktop(window.innerWidth >= 768);
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+  const menus = { en: englishMenu, el: greekmenu };
+  const currentMenu = menus[language];
+
+  // Group items by category: { "STARTERS": [items...], "GRILL": [items...] }
+  const groupedMenu = useMemo(() => {
+    const groups = {};
+    // Preserve order from JSON by using a Set for keys first
+    const uniqueCategories = [...new Set(currentMenu.map((i) => i.category))];
+    
+    uniqueCategories.forEach(cat => {
+      groups[cat] = currentMenu.filter(i => i.category === cat);
+    });
+    return groups;
+  }, [currentMenu]);
+
+  // Accordion state (for mobile) - default to first category open
+  const firstCat = Object.keys(groupedMenu)[0];
+  const [openCategory, setOpenCategory] = useState(firstCat);
+
+  const t = {
+    en: { title: "OUR MENU", one: "Full", half: "Half" },
+    el: { title: "ΤΟ ΜΕΝΟΥ ΜΑΣ", one: "Μερίδα", half: "Μισή" },
+  };
+
+  const handleChange = (e) => setLanguage(e.target.value);
+
+  return (
+    <div className="w-full bg-platinum py-16 px-4 flex justify-center">
+      <div className="w-full max-w-[1200px] flex flex-col gap-8">
+        
+        {/* Header Controls */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-300 pb-6">
+          <div className="relative">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1b464a] font-heading uppercase">
+              {t[language].title}
+            </h1>
+            <div className="h-1.5 w-24 bg-[#ed1c23] mt-2 rounded-full"></div>
           </div>
 
-          {/* RIGHT: CATEGORY CONTENT */}
-          <div className="flex flex-col p-4">
-            <motion.h2
-              key={`title-${activeCategory}`}
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 0.7, y: 0 }}
-              exit={{ opacity: 0, y: 6 }}
-              transition={{ duration: prefersReduced ? 0 : 0.2 }}
-              className="text-2xl font-bold"
-            >
-              {visibleItems[0]?.category}
-            </motion.h2>
-
-            <motion.div
-              layout
-              className="grid grid-cols-[2.5fr_1fr_1fr] md:grid-cols-[5fr_1fr_1fr] items-center mb-4 font-bold"
-            >
-              <div className="w-full border-t-2 border-black border-dotted" />
-              <div className="text-end mr-1">
-                <span className="inline md:hidden">1</span>
-                <span className="hidden md:inline">{t[language].one}</span>
-              </div>
-              <div className="text-end">
-                <span className="inline md:hidden">½</span>
-                <span className="hidden md:inline">{t[language].half}</span>
-              </div>
-            </motion.div>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeCategory}
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="contents"
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Language:</span>
+            <div className="relative">
+              <select
+                id="language"
+                className="appearance-none bg-white border-2 border-[#1b464a] text-[#1b464a] font-bold rounded-lg py-2 pl-4 pr-10 cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#ed1c23]"
+                value={language}
+                onChange={handleChange}
               >
-                {visibleItems.map((item) => (
-                  <motion.div
-                    layout
-                    key={item.id ?? `${item.category}-${item.foodItem}`}
-                    variants={itemVariants}
-                    className="grid grid-cols-[2.5fr_1fr_1fr] md:grid-cols-[5fr_1fr_1fr] mb-1 font-light hover:font-medium cursor-pointer md:text-lg"
-                    whileHover={{ scale: prefersReduced ? 1 : 1.01 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                  >
-                    <div>{item.foodItem}</div>
-
-                    <div className="flex justify-end items-end">
-                      <div className="text-xs mr-1 font-medium">
-                        {item.sizeOne !== "1" && item.sizeOne}
-                      </div>
-                      <div>€{item.priceOne}</div>
-                    </div>
-
-                    <div className="flex justify-end items-end">
-                      <div className="text-xs mr-1 font-medium">
-                        {item.sizeHalf !== "½" && item.sizeHalf}
-                      </div>
-                      <div>
-                        {item.priceHalf ? "€" : ""}
-                        {item.priceHalf}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
+                <option value="en">ENGLISH</option>
+                <option value="el">ΕΛΛΗΝΙΚΑ</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#1b464a]">
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Menu Grid / Accordion */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start">
+          {Object.entries(groupedMenu).map(([category, items]) => (
+            <MenuCategory
+              key={category}
+              title={category}
+              items={items}
+              t={t[language]}
+              isOpen={openCategory === category}
+              isDesktop={isDesktop}
+              onToggle={() => setOpenCategory(openCategory === category ? null : category)}
+            />
+          ))}
+        </div>
+
       </div>
-    </>
+    </div>
   );
 }
 
