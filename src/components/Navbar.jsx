@@ -123,7 +123,9 @@ const Navbar = () => {
               onClick={() => handleScroll(link.id)}
               onMouseEnter={() => setHoveredLink(link.name)}
               onMouseLeave={() => setHoveredLink(null)}
-              whileHover={{ y: -1, scale: 1.02 }}\n              whileTap={{ scale: 0.96 }}\n              className="relative cursor-pointer [text-shadow:0_1px_2px_rgba(0,0,0,0.7)]"
+              whileHover={{ y: -1, scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
+              className="relative cursor-pointer [text-shadow:0_1px_2px_rgba(0,0,0,0.7)]"
             >
               {link.name}
               {hoveredLink === link.name && (
