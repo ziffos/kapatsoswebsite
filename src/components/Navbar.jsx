@@ -192,33 +192,33 @@ const Navbar = () => {
             className="md:hidden glass-nav-mob rounded-2xl m-2 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-3 space-y-2">
-              <div className="flex justify-between mb-4 mt-2">
+              <div className="flex flex-nowrap justify-between gap-2 mb-4 mt-2">
                 {/* Mobile FOOD MENU */}
                 <motion.div
                   variants={itemVariants}
                   whileTap={{ scale: 0.96 }}
                   onClick={() => handleScroll("menu")}
-                  className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer"
+                  className="flex-1 px-2 py-2 rounded-full flex gap-1 justify-center items-center bg-redcmyk cursor-pointer whitespace-nowrap"
                 >
-                  <img src={plate} alt="Menu" className="h-[20px]" />
-                  FOOD MENU
+                  <img src={plate} alt="Menu" className="h-[18px]" />
+                  <span className="text-sm font-bold">FOOD MENU</span>
                 </motion.div>
 
                 {/* Mobile phone with LIVE indicator */}
-                <a href="tel:25585897">
+                <a href="tel:25585897" className="flex-1 block">
                   <motion.div
                     variants={itemVariants}
                     whileTap={{ scale: 0.96 }}
-                    className="px-6 py-2 rounded-full flex gap-2 items-center bg-redcmyk cursor-pointer"
+                    className="w-full px-2 py-2 rounded-full flex gap-1 justify-center items-center bg-redcmyk cursor-pointer whitespace-nowrap"
                   >
-                     <div className="relative flex items-center justify-center w-[12px] h-[12px] mr-1">
+                     <div className="relative flex items-center justify-center w-[10px] h-[10px] mr-1">
                       {isShopOpen && (
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
                       )}
-                      <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${isShopOpen ? 'bg-green-400' : 'bg-red-400'}`}></span>
+                      <span className={`relative inline-flex rounded-full h-2 w-2 ${isShopOpen ? 'bg-green-400' : 'bg-red-400'}`}></span>
                     </div>
-                    <img src={phone} alt="Phone" className="h-[20px]" />
-                    25 585897
+                    <img src={phone} alt="Phone" className="h-[18px]" />
+                    <span className="text-sm font-bold">25 585897</span>
                   </motion.div>
                 </a>
               </div>
