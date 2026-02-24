@@ -131,9 +131,8 @@ function Menu() {
     return groups;
   }, [currentMenu]);
 
-  // Accordion state (for mobile) - default to first category open
-  const firstCat = Object.keys(groupedMenu)[0];
-  const [openCategory, setOpenCategory] = useState(firstCat);
+  // Accordion state (for mobile) - default to all categories closed
+  const [openCategory, setOpenCategory] = useState(null);
 
   const t = {
     en: { title: "OUR MENU", one: "Full", half: "Half" },
