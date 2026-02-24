@@ -2,7 +2,7 @@ import React from "react";
 
 function InfoTwo() {
   return (
-    <div class="flex justify-center">
+    <div className="flex justify-center">
       <div className=" md:w-[1200px] flex flex-col md:flex-row items-center md:h-[400px] h-[550px] bg-khaki mt-8 rounded-2xl shadow ">
         <div className="md:w-[800px] p-8 flex flex-col items-center gap-8">
           <h1 className="md:text-2xl font-extrabold mb-4">CONTACT US</h1>

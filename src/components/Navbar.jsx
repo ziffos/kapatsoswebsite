@@ -12,16 +12,23 @@ function useIsOpen() {
 
   useEffect(() => {
     const checkTime = () => {
-      // Create date object for Cyprus time (approximate for EU/Athens timezone)
+      // Always use Cyprus time regardless of visitor's timezone
       const now = new Date();
-      // Adjust to UTC+3 (EEST) or UTC+2 (EET) roughly by using local if user is in Cyprus
-      // Or simply use getDay/getHours if the user is viewing from Cyprus.
-      
-      const day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue...
-      const hour = now.getHours();
+      const cyprusTime = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Nicosia",
+        hour: "numeric",
+        hour12: false,
+        weekday: "short",
+      }).formatToParts(now);
 
-      // Closed on Tuesdays (day 2)
-      if (day === 2) {
+      const day = cyprusTime.find((p) => p.type === "weekday")?.value;
+      const hour = parseInt(
+        cyprusTime.find((p) => p.type === "hour")?.value,
+        10
+      );
+
+      // Closed on Tuesdays
+      if (day === "Tue") {
         setIsOpen(false);
         return;
       }
@@ -35,7 +42,7 @@ function useIsOpen() {
     };
 
     checkTime();
-    const interval = setInterval(checkTime, 60000); // check every minute
+    const interval = setInterval(checkTime, 60000);
     return () => clearInterval(interval);
   }, []);
 

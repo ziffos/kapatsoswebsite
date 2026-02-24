@@ -152,7 +152,7 @@ export default function Info() {
               dedicated to sharing the authentic flavors and traditions of our
               island with every visitor. Whether you are a local or a traveler
               discovering Cyprus, our goal is to make you feel at home and give
-              you a memorable experience..
+              you a memorable experience.
             </p>
           </div>
         </div>
@@ -216,7 +216,8 @@ export default function Info() {
               className="absolute inset-0 h-full w-full object-cover rounded-lg"
               loading="lazy"
             />
-            <span className="relative z-10">{item.id}</span>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg" />
+            <span className="relative z-10 [text-shadow:0_1px_4px_rgba(0,0,0,0.8)]">{item.id}</span>
           </div>
         ))}
       </div>

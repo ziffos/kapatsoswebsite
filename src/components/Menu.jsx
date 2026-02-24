@@ -141,6 +141,11 @@ function Menu() {
 
   const handleChange = (e) => setLanguage(e.target.value);
 
+  // Update <html lang> attribute when language changes (#14)
+  useEffect(() => {
+    document.documentElement.lang = language === "el" ? "el" : "en";
+  }, [language]);
+
   return (
     <div className="w-full bg-platinum py-16 px-4 flex justify-center">
       <div className="w-full max-w-[1200px] flex flex-col gap-8">
