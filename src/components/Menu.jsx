@@ -80,7 +80,7 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
                   </div>
 
                   {/* Price 1 (Full) */}
-                  <div className="text-right font-bold text-gray-700 flex items-baseline justify-end">
+                  <div className="text-right font-bold text-gray-700 flex items-baseline justify-end ml-4">
                     <span>{item.priceOne ? `€${item.priceOne}` : "-"}</span>
                     <span className="w-5 text-left text-[10px] font-normal text-gray-400 ml-0.5">
                       {item.sizeOne === "/kg" ? "/kg" : ""}
