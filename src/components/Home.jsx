@@ -73,7 +73,7 @@ const Home = () => {
             {/* Social */}
             <div className="flex gap-1">
               <IconLink
-                href="https://www.facebook.com/betty.crispy.chicken"
+                href="https://www.facebook.com/share/1DQE28MzMg/"
                 label="Facebook"
                 src={facebook}
                 className="h-[40px] drop-shadow-lg"
@@ -81,7 +81,7 @@ const Home = () => {
                 whileTap={iconTap}
               />
               <IconLink
-                href="https://www.instagram.com/betty.crispy.chicken"
+                href="https://www.instagram.com/psistaria.kapatsos?igsh=MTdldm5qcmc1em05bw=="
                 label="Instagram"
                 src={instagram}
                 className="h-[40px] drop-shadow-lg"
