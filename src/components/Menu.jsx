@@ -58,8 +58,7 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
             <div className="p-4 pt-2 bg-white flex flex-col gap-3">
               {/* Legend for sizes (only show once per card for cleaner look) */}
               <div className="flex justify-end text-xs text-gray-400 font-bold uppercase tracking-wider mb-1 border-b border-gray-100 pb-1">
-                <span className="text-right">{t.one}</span>
-                <span className="w-5"></span>
+                <span className="w-16 text-right">{t.one}</span>
                 <span className="w-16 text-right">{t.half}</span>
               </div>
 
@@ -80,11 +79,8 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
                   </div>
 
                   {/* Price 1 (Full) */}
-                  <div className="text-right font-bold text-gray-700 flex items-baseline justify-end ml-8">
-                    <span>{item.priceOne ? `€${item.priceOne}` : "-"}</span>
-                    <span className="w-5 text-left text-[10px] font-normal text-gray-400 ml-0.5">
-                      {item.sizeOne === "/kg" ? "/kg" : ""}
-                    </span>
+                  <div className="w-16 text-right font-bold text-gray-700">
+                    {item.priceOne ? `€${item.priceOne}` : "-"}
                   </div>
 
                   {/* Price 1/2 (Half) */}
@@ -128,8 +124,9 @@ function Menu() {
     return groups;
   }, [currentMenu]);
 
-  // Accordion state (for mobile) - default to all categories closed
-  const [openCategory, setOpenCategory] = useState(null);
+  // Accordion state (for mobile) - default to first category open
+  const firstCat = Object.keys(groupedMenu)[0];
+  const [openCategory, setOpenCategory] = useState(firstCat);
 
   const t = {
     en: { title: "OUR MENU", one: "Full", half: "Half" },
