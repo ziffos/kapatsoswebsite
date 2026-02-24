@@ -4,14 +4,9 @@ import greekmenu from "../data/greekmenu.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 // --- Sub-component for a single category section ---
-const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop, vegOnly }) => {
+const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
   // On desktop, we force it open. On mobile, we respect the state.
   const showContent = isDesktop || isOpen;
-
-  const filteredItems = vegOnly ? items.filter(item => item.vegetarian === "TRUE") : items;
-
-  // Don't render the category at all if filtering and no items match
-  if (filteredItems.length === 0) return null;
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col h-full">
@@ -67,7 +62,7 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop, vegOnly })
                 <span className="w-16 text-right">{t.half}</span>
               </div>
 
-              {filteredItems.map((item) => (
+              {items.map((item) => (
                 <div
                   key={item.id}
                   className="grid grid-cols-[1fr_auto_auto] gap-2 items-baseline group"
@@ -76,9 +71,6 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop, vegOnly })
                   <div className="relative overflow-hidden">
                     <span className="text-gray-800 font-medium md:text-lg group-hover:text-[#ed1c23] transition-colors">
                       {item.foodItem}
-                      {item.vegetarian === "TRUE" && (
-                        <span className="ml-1.5 text-green-600 text-sm" title="Vegetarian">🌿</span>
-                      )}
                     </span>
                     {/* Dotted leader visual hack */}
                     <span className="absolute bottom-1 ml-1 text-gray-300 w-full whitespace-nowrap overflow-hidden">
@@ -114,7 +106,6 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop, vegOnly })
 
 function Menu() {
   const [language, setLanguage] = useState("en");
-  const [vegOnly, setVegOnly] = useState(false);
   // Simple check for desktop viewport (hook-based for reactivity)
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -164,16 +155,6 @@ function Menu() {
           </div>
 
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => setVegOnly(!vegOnly)}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-lg font-bold text-sm border-2 transition-all duration-200 cursor-pointer ${
-                vegOnly
-                  ? "bg-green-600 border-green-600 text-white"
-                  : "bg-white border-[#1b464a] text-[#1b464a] hover:bg-gray-50"
-              }`}
-            >
-              🌿 {language === "el" ? "Χορτοφαγικά" : "Vegetarian"}
-            </button>
             <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Language:</span>
             <div className="relative">
               <select
@@ -202,7 +183,6 @@ function Menu() {
               t={t[language]}
               isOpen={openCategory === category}
               isDesktop={isDesktop}
-              vegOnly={vegOnly}
               onToggle={() => setOpenCategory(openCategory === category ? null : category)}
             />
           ))}
