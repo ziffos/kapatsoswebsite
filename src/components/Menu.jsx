@@ -79,8 +79,15 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
                   </div>
 
                   {/* Price 1 (Full) */}
-                  <div className="w-16 text-right font-bold text-gray-700">
-                    {item.priceOne ? `€${item.priceOne}` : "-"}
+                  <div className="w-20 text-right font-bold text-gray-700">
+                    {item.priceOne ? (
+                      <>
+                        {`€${item.priceOne}`}
+                        {item.sizeOne === "/kg" && (
+                          <span className="text-xs font-normal text-gray-400">/kg</span>
+                        )}
+                      </>
+                    ) : "-"}
                   </div>
 
                   {/* Price 1/2 (Half) */}
@@ -124,9 +131,8 @@ function Menu() {
     return groups;
   }, [currentMenu]);
 
-  // Accordion state (for mobile) - default to first category open
-  const firstCat = Object.keys(groupedMenu)[0];
-  const [openCategory, setOpenCategory] = useState(firstCat);
+  // Accordion state (for mobile) - default to all categories closed
+  const [openCategory, setOpenCategory] = useState(null);
 
   const t = {
     en: { title: "OUR MENU", one: "Full", half: "Half" },
