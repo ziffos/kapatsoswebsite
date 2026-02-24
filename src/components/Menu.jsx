@@ -80,7 +80,14 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
 
                   {/* Price 1 (Full) */}
                   <div className="w-16 text-right font-bold text-gray-700">
-                    {item.priceOne ? `€${item.priceOne}` : "-"}
+                    {item.priceOne ? (
+                      <>
+                        {`€${item.priceOne}`}
+                        {item.sizeOne === "/kg" && (
+                          <span className="text-[10px] font-normal text-gray-400">/kg</span>
+                        )}
+                      </>
+                    ) : "-"}
                   </div>
 
                   {/* Price 1/2 (Half) */}
