@@ -33,8 +33,8 @@ function useIsOpen() {
         return;
       }
 
-      // Open 10:00 to 18:00
-      if (hour >= 10 && hour < 18) {
+      // Open 11:00 to 20:00
+      if (hour >= 11 && hour < 20) {
         setIsOpen(true);
       } else {
         setIsOpen(false);

@@ -31,7 +31,7 @@ function InfoTwo() {
             <h2 className="md:text-xl font-bold mb-2">OPENING HOURS</h2>
             <p className="text-sm md:text-base font-light">
               Open Daily (except Tuesdays)
-              <br /> 10 am - 6 pm
+              <br /> 11 am - 8 pm
             </p>
           </div>
         </div>
