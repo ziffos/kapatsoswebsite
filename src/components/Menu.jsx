@@ -58,7 +58,8 @@ const MenuCategory = ({ title, items, t, isOpen, onToggle, isDesktop }) => {
             <div className="p-4 pt-2 bg-white flex flex-col gap-3">
               {/* Legend for sizes (only show once per card for cleaner look) */}
               <div className="flex justify-end text-xs text-gray-400 font-bold uppercase tracking-wider mb-1 border-b border-gray-100 pb-1">
-                <span className="w-16 text-right">{t.one}</span>
+                <span className="text-right">{t.one}</span>
+                <span className="w-5"></span>
                 <span className="w-16 text-right">{t.half}</span>
               </div>
 
